@@ -32,8 +32,10 @@
             lessionContainer.innerHTML = "";
             for (let lession of less) {
                 const btndiv = document.createElement("div");
-                btndiv.innerHTML = ` <a id="lesson-btn-${lession.level_no}" onclick="showLevelData(${lession.level_no})" class=" lessionbtn btn my-2 hover:bg-blue-500 hover:text-white"> Learn ${lession.level_no
-                    }</a>`;
+                btndiv.innerHTML = ` <div class="flex flex-auto">
+
+                <button id="lesson-btn-${lession.level_no}" onclick="showLevelData(${lession.level_no})" class="lessionbtn btn  hover:bg-blue-500 hover:text-white"> Learn ${lession.level_no
+                    }</button></div> `;
                 lessionContainer.append(btndiv);
             }
         };
